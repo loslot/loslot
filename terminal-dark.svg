@@ -5,9 +5,6 @@
       <stop offset="0.5" stop-color="#22D3EE" stop-opacity="0.9"/>
       <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
     </linearGradient>
-    <filter id="blur" filterUnits="userSpaceOnUse" x="0" y="0" width="800" height="534">
-      <feGaussianBlur stdDeviation="3"/>
-    </filter>
     <clipPath id="type">
       <rect x="84" y="182" height="36" width="0">
         <animate attributeName="width" calcMode="discrete" dur="8s" repeatCount="indefinite"
@@ -32,26 +29,22 @@
 
   <rect x="10" y="10" width="780" height="514" rx="12" fill="#070B14" stroke="#1E293B"/>
 
-  <!-- Animated border beams (outside the card) -->
+  <!-- Animated border beams (outside the card). Perimeter = 2586 -->
   <!-- Cyan glow -->
-  <rect x="7" y="7" width="786" height="520" rx="15" fill="none" stroke="#22D3EE" stroke-width="6" stroke-linecap="round"
-        pathLength="100" stroke-dasharray="14 86" opacity="0.7" filter="url(#blur)">
-    <animate attributeName="stroke-dashoffset" values="0;-100" dur="6s" repeatCount="indefinite"/>
+  <rect x="6" y="6" width="788" height="522" rx="16" fill="none" stroke="#22D3EE" stroke-width="8" stroke-linecap="round" stroke-opacity="0.22" stroke-dasharray="380 2210">
+    <animate attributeName="stroke-dashoffset" from="0" to="-2590" dur="8s" repeatCount="indefinite"/>
   </rect>
   <!-- Cyan line -->
-  <rect x="7" y="7" width="786" height="520" rx="15" fill="none" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round"
-        pathLength="100" stroke-dasharray="14 86">
-    <animate attributeName="stroke-dashoffset" values="0;-100" dur="6s" repeatCount="indefinite"/>
+  <rect x="6" y="6" width="788" height="522" rx="16" fill="none" stroke="#22D3EE" stroke-width="3" stroke-linecap="round" stroke-dasharray="380 2210">
+    <animate attributeName="stroke-dashoffset" from="0" to="-2590" dur="8s" repeatCount="indefinite"/>
   </rect>
   <!-- Purple glow -->
-  <rect x="7" y="7" width="786" height="520" rx="15" fill="none" stroke="#A78BFA" stroke-width="6" stroke-linecap="round"
-        pathLength="100" stroke-dasharray="14 86" opacity="0.7" filter="url(#blur)">
-    <animate attributeName="stroke-dashoffset" values="-50;-150" dur="6s" repeatCount="indefinite"/>
+  <rect x="6" y="6" width="788" height="522" rx="16" fill="none" stroke="#A78BFA" stroke-width="8" stroke-linecap="round" stroke-opacity="0.22" stroke-dasharray="380 2210">
+    <animate attributeName="stroke-dashoffset" from="-1295" to="-3885" dur="8s" repeatCount="indefinite"/>
   </rect>
   <!-- Purple line -->
-  <rect x="7" y="7" width="786" height="520" rx="15" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round"
-        pathLength="100" stroke-dasharray="14 86">
-    <animate attributeName="stroke-dashoffset" values="-50;-150" dur="6s" repeatCount="indefinite"/>
+  <rect x="6" y="6" width="788" height="522" rx="16" fill="none" stroke="#A78BFA" stroke-width="3" stroke-linecap="round" stroke-dasharray="380 2210">
+    <animate attributeName="stroke-dashoffset" from="-1295" to="-3885" dur="8s" repeatCount="indefinite"/>
   </rect>
 
   <path d="M10 22a12 12 0 0 1 12-12h756a12 12 0 0 1 12 12v26H10z" fill="#0D1424"/>
