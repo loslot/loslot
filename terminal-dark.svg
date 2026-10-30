@@ -5,9 +5,14 @@
       <stop offset="0.5" stop-color="#22D3EE" stop-opacity="0.9"/>
       <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
     </linearGradient>
+    <filter id="blur" filterUnits="userSpaceOnUse" x="0" y="0" width="800" height="534">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
     <clipPath id="type">
       <rect x="84" y="182" height="36" width="0">
-        <animate attributeName="width" values="0;460;460;0" keyTimes="0;0.5;0.9;1" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="width" calcMode="discrete" dur="8s" repeatCount="indefinite"
+          keyTimes="0;0.0176;0.0353;0.0529;0.0706;0.0882;0.1059;0.1235;0.1412;0.1588;0.1765;0.1941;0.2118;0.2294;0.2471;0.2647;0.2824;0.3;0.3176;0.3353;0.3529;0.3706;0.3882;0.4059;0.4235;0.4412;0.4588;0.4765;0.4941;0.5118;0.5294;0.5471;0.5647;0.5824;0.6"
+          values="0;13.2;26.4;39.6;52.8;66;79.2;92.4;105.6;118.8;132;145.2;158.4;171.6;184.8;198;211.2;224.4;237.6;250.8;264;277.2;290.4;303.6;316.8;330;343.2;356.4;369.6;382.8;396;409.2;422.4;435.6;448.8"/>
       </rect>
     </clipPath>
   </defs>
@@ -26,6 +31,29 @@
   </style>
 
   <rect x="10" y="10" width="780" height="514" rx="12" fill="#070B14" stroke="#1E293B"/>
+
+  <!-- Animated border beams (outside the card) -->
+  <!-- Cyan glow -->
+  <rect x="7" y="7" width="786" height="520" rx="15" fill="none" stroke="#22D3EE" stroke-width="6" stroke-linecap="round"
+        pathLength="100" stroke-dasharray="14 86" opacity="0.7" filter="url(#blur)">
+    <animate attributeName="stroke-dashoffset" values="0;-100" dur="6s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Cyan line -->
+  <rect x="7" y="7" width="786" height="520" rx="15" fill="none" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round"
+        pathLength="100" stroke-dasharray="14 86">
+    <animate attributeName="stroke-dashoffset" values="0;-100" dur="6s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Purple glow -->
+  <rect x="7" y="7" width="786" height="520" rx="15" fill="none" stroke="#A78BFA" stroke-width="6" stroke-linecap="round"
+        pathLength="100" stroke-dasharray="14 86" opacity="0.7" filter="url(#blur)">
+    <animate attributeName="stroke-dashoffset" values="-50;-150" dur="6s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Purple line -->
+  <rect x="7" y="7" width="786" height="520" rx="15" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round"
+        pathLength="100" stroke-dasharray="14 86">
+    <animate attributeName="stroke-dashoffset" values="-50;-150" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
   <path d="M10 22a12 12 0 0 1 12-12h756a12 12 0 0 1 12 12v26H10z" fill="#0D1424"/>
   <line x1="10" y1="48" x2="790" y2="48" stroke="#1E293B"/>
   <rect x="150" y="10" width="500" height="1.5" fill="url(#glow)"/>
@@ -38,9 +66,11 @@
   <text x="40" y="150" class="sans" font-size="52" font-weight="800" fill="#E6EDF7">I’m <tspan fill="#22D3EE">Lot Los</tspan></text>
 
   <text x="40" y="208" class="mono" font-size="22" font-weight="700" fill="#A78BFA">$&gt;</text>
-  <text x="84" y="208" class="mono" font-size="22" font-weight="700" fill="#22D3EE" clip-path="url(#type)">Full-stack Developer &amp; AI Engineer</text>
+  <text x="84" y="208" class="mono" font-size="22" font-weight="700" fill="#22D3EE" textLength="448.8" lengthAdjust="spacing" clip-path="url(#type)">Full-stack Developer &amp; AI Engineer</text>
   <rect x="84" y="190" width="10" height="24" fill="#22D3EE">
-    <animate attributeName="x" values="84;534;534;84" keyTimes="0;0.5;0.9;1" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="x" calcMode="discrete" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.0176;0.0353;0.0529;0.0706;0.0882;0.1059;0.1235;0.1412;0.1588;0.1765;0.1941;0.2118;0.2294;0.2471;0.2647;0.2824;0.3;0.3176;0.3353;0.3529;0.3706;0.3882;0.4059;0.4235;0.4412;0.4588;0.4765;0.4941;0.5118;0.5294;0.5471;0.5647;0.5824;0.6"
+      values="84;97.2;110.4;123.6;136.8;150;163.2;176.4;189.6;202.8;216;229.2;242.4;255.6;268.8;282;295.2;308.4;321.6;334.8;348;361.2;374.4;387.6;400.8;414;427.2;440.4;453.6;466.8;480;493.2;506.4;519.6;532.8"/>
     <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
   </rect>
 
